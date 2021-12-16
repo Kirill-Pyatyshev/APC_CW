@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="562.0" prefWidth="744.0" style="-fx-background-color: #444F5A;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AutoModeController">
+   <children>
+      <TableView fx:id="sources" layoutX="16.0" layoutY="45.0" prefHeight="243.0" prefWidth="714.0">
+        <columns>
+          <TableColumn fx:id="sNum" prefWidth="47.0" text="№" />
+          <TableColumn fx:id="genNum" prefWidth="107.0" text="Кол-во сгенерированнх заявок" />
+            <TableColumn fx:id="rejectP" prefWidth="129.0" text="Вероятность отказа" />
+            <TableColumn fx:id="timeIn" prefWidth="142.0" text="Ср. время пребывания" />
+            <TableColumn fx:id="waitTime" prefWidth="130.0" text="Ср. время ожидания" />
+            <TableColumn fx:id="handleTime" prefWidth="158.0" text="Ср. время обслуживания" />
+        </columns>
+      </TableView>
+      <TableView fx:id="devices" layoutX="363.0" layoutY="343.0" prefHeight="206.0" prefWidth="371.0">
+        <columns>
+          <TableColumn fx:id="devNum" prefWidth="75.0" text="№" />
+          <TableColumn fx:id="coef" prefWidth="193.0" text="Коэф. использования" />
+        </columns>
+      </TableView>
+      <Button fx:id="menuBtn" layoutX="59.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#openMenu" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #3E4149;" text="Меню" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label layoutX="20.0" layoutY="14.0" text="Сводная таблица статистики источников" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="363.0" layoutY="312.0" prefHeight="20.0" prefWidth="371.0" text="Сводная таблица статистики приборов" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="20.0" layoutY="299.0" prefHeight="46.0" prefWidth="155.0" text="Дисперсия время ожидания" textAlignment="CENTER" textFill="#42f254" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="301.0" prefHeight="45.0" prefWidth="155.0" text="Дисперсия времени обслуживания" textAlignment="CENTER" textFill="#42f254" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="despWaitTime" layoutX="20.0" layoutY="351.0" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #82ed8d;" />
+      <TextArea fx:id="despServTime" layoutX="188.0" layoutY="351.0" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #82ed8d;" />
+   </children>
+</AnchorPane>

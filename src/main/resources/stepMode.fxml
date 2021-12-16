@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="562.0" prefWidth="1028.0" style="-fx-background-color: #444F5A;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StepModeController">
+   <children>
+      <Label layoutX="735.0" layoutY="4.0" prefHeight="20.0" prefWidth="288.0" text="Календарь событий" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="7.0" layoutY="2.0" prefHeight="30.0" prefWidth="175.0" text="Состояние источников" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="162.0" prefHeight="30.0" prefWidth="127.0" text="Состояние буфера" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="321.0" prefHeight="30.0" prefWidth="146.0" text="Состояние приборов" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="nextStepBtn" layoutX="359.0" layoutY="494.0" mnemonicParsing="false" onAction="#nextStep" prefHeight="30.0" prefWidth="202.0" style="-fx-background-color: #3E4149;" text="Следующий шаг" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="menuBtn" layoutX="20.0" layoutY="496.0" mnemonicParsing="false" onAction="#openMenu" prefHeight="30.0" prefWidth="109.0" style="-fx-background-color: #3E4149;" text="Меню" textFill="#42f254">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TextArea fx:id="events" layoutX="736.0" layoutY="31.0" prefHeight="522.0" prefWidth="288.0" />
+      <TableView fx:id="sources" layoutX="170.0" layoutY="4.0" prefHeight="150.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="sourceNum" prefWidth="75.0" text="№" />
+          <TableColumn fx:id="genTime" prefWidth="139.0" text="Время генерации" />
+            <TableColumn fx:id="reqNum" prefWidth="140.0" text="Кол-во заявок" />
+            <TableColumn fx:id="rejReqNum" prefWidth="205.0" text="Кол-во отказанных заявок" />
+        </columns>
+      </TableView>
+      <TableView fx:id="buffer" layoutX="170.0" layoutY="165.0" prefHeight="150.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="position" prefWidth="75.0" text="Позиция" />
+          <TableColumn fx:id="bufGenTime" prefWidth="160.0" text="Время генерации" />
+            <TableColumn fx:id="bufSourceNum" prefWidth="161.0" text="№ источника" />
+            <TableColumn fx:id="bufRequestNum" prefWidth="163.0" text="№ заявки" />
+        </columns>
+      </TableView>
+      <TableView fx:id="devices" layoutX="170.0" layoutY="326.0" prefHeight="150.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="deviceNum" prefWidth="34.0" text="№" />
+          <TableColumn fx:id="releaseTime" prefWidth="115.0" text="Время освобождения" />
+            <TableColumn fx:id="downtime" prefWidth="117.0" text="Время простоя" />
+            <TableColumn fx:id="sNum" prefWidth="86.0" text="№ источника" />
+            <TableColumn fx:id="rNum" prefWidth="66.0" text="№ заявки" />
+            <TableColumn fx:id="gTime" prefWidth="141.0" text="Время генерации" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
